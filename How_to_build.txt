@@ -1,0 +1,85 @@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@                     Author : shafayetrahat                                       @
+@                     for any futher information mail to                           @
+@                     shafayetrahat@gmail.com                                      @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+TeLiSc building:
+
+#################################################################################### 
+#                           require package:                                       #
+#                           archiso is needed,                                     #
+#                           other dependencies can be varied from                  #
+#                           machine to machine                                     #
+####################################################################################
+
+
+####################################################################################            	
+#                             ____ _____ _____ ____  							   #
+#                            / ___|_   _| ____|  _ \ 							   #
+#                            \___ \ | | |  _| | |_) |							   #
+#                             ___) || | | |___|  __/ 							   #
+#                            |____/ |_| |_____|_|    							   #
+#                     															   #
+#    							  for changing arch distro                         #
+#								  through script 							 	   #
+#																				   #
+####################################################################################
+
+
+
+1. edit /usr/bin/mkarchiso and add -i to both pacstrap lines
+
+2. sudo mkdir telisc_build
+
+3. sudo cp -r /usr/share/archiso/configs/releng/* $HOME/telisc_build/
+
+4. cd telisc_build 
+
+5. edit build.sh
+
+#for adding or removing packages
+
+6. edit packages.both 
+
+#for adding any server or removing server
+
+7. edit pacman.conf 
+
+# for customizing configure
+
+8. customize_airootfs.sh , add remove with need
+
+autologin.conf # change to user as per customize_airootfs.sh
+
+#####################################################################################
+#                _                _                     _                           #
+#  __ _ _ __ ___| |__         ___| |__  _ __ ___   ___ | |_                         #
+# / _` | '__/ __| '_ \ _____ / __| '_ \| '__/ _ \ / _ \| __|                        #
+#| (_| | | | (__| | | |_____| (__| | | | | | (_) | (_) | |_                         #
+# \__,_|_|  \___|_| |_|      \___|_| |_|_|  \___/ \___/ \__|                        #
+#                                                                                   #
+#####################################################################################
+
+you can access to the
+
+$HOME/telisc_build/work/x86_64/airootfs/
+
+and
+
+use command 
+
+sudo arch-chroot airootfs /usr/bin/bash
+
+but careful!!!!!!!!!!!
+
+about the init keyring for any package 
+
+for more information about arch-chroot and 
+
+https://wiki.archlinux.org/index.php/Pacman/Package_signing
+and
+https://wiki.archlinux.org/index.php/change_root
+  
+
+
